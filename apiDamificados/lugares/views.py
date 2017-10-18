@@ -5,7 +5,7 @@ from rest_framework.views import APIView
 from rest_framework import status
 from rest_framework.response import Response
 
-from .models import Luages
+from .models import Lugares
 from .serializers import LugaresSerializer
 from django.shortcuts import render
 from lugares.models import *
