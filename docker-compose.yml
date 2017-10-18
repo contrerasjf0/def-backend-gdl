@@ -1,11 +1,14 @@
 version: '2'
 services: 
+  docker-mysql:
+    image: mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=Mipass_12345
+      - MYSQL_DATABASE=danmificadosDb
   django-clase:
     # build: .
     image: docker-api-devf
     ports:
       - "8000:8000"
-  docker-mysql:
-    image: mysql
-    environment:
-      - MYSQL_ROOT_PASSWORD=Mipass_12345
+    depends_on:
+      - "docker-mysql"

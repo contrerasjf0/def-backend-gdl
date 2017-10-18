@@ -8,8 +8,8 @@ from personas.models import Personas
 STATUS = (("1","Actual"),("0","Ya no"))
 
 class Lugares(models.Model) :
-	calle = models.CharField(max_length=100)
 	nombre = models.CharField(max_length=100)
+	calle = models.CharField(max_length=100)
 	colonia = models.CharField(max_length=100)
 
 class PersonasHasLugares(models.Model):
